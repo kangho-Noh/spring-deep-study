@@ -3,7 +3,6 @@ package hello.core;
 import hello.core.member.Grade;
 import hello.core.member.Member;
 import hello.core.member.MemberService;
-import hello.core.member.MemberServiceImpl;
 
 
 //스프링 코드가 1도 없는 순수한 자바로 짠 테스트코드
@@ -12,7 +11,8 @@ import hello.core.member.MemberServiceImpl;
 public class MemberApp {
 
     public static void main(String[] args) {
-        MemberService memberService = new MemberServiceImpl();
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
         Member member = new Member(1L, "memberA", Grade.VIP);// Long타입 1L 아니고 1치면 오류남
         memberService.join(member);
 
