@@ -15,7 +15,6 @@ public class OrderServiceImpl implements OrderService {
     }
 
     @Override
-
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         // order 인터페이스가 discount가 어떤 역할을 하는지 몰라도 값만 던져주면 반환해줌. -> 잘 된 설계
         Member member = memberRepository.findById(memberId);
