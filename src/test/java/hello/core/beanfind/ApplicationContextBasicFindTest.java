@@ -14,6 +14,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 public class ApplicationContextBasicFindTest {
 
+     //AnnotationConfigApplicationContext로 사용하는 이유: ApplicationContext에는 getBean 함수가 없음. Annotation-이 더 하위 구현체라 함수가 더 많다.
      AnnotationConfigApplicationContext ac = new AnnotationConfigApplicationContext(AppConfig.class);
 
      @Test
