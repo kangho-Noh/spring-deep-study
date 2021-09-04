@@ -30,4 +30,11 @@ public class OrderServiceTest {
         Order order = orderService.createOrder(memberId, "itemA", 10000);
         Assertions.assertThat(order.getDiscountPrice()).isEqualTo(1000);
     }
+
+    // field injection 했을 때 BeforeEach에서 nullptr exception이 터짐
+//    @Test
+//    void fieldInjectionTest(){
+//        OrderServiceImpl orderService = new OrderServiceImpl();
+//        orderService.createOrder(1L, "item", 10000);
+//    }
 }
