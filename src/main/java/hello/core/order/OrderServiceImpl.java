@@ -14,7 +14,7 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
 
-    /* @RequiredArgsConstructor 롬복 사용으로 필요없어짐
+    /* //@RequiredArgsConstructor 롬복 사용으로 필요없어짐
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
